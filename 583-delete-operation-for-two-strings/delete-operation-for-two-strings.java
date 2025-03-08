@@ -6,7 +6,6 @@ class Solution {
 
         return valid(word1, word2);
     }
-
     
     private static int valid(String word1, String word2) {
 
@@ -25,6 +24,7 @@ class Solution {
                 }
             }
         }
-        return word1.length() - dp[word1.length()][word2.length()] + word2.length() - dp[word1.length()][word2.length()];
+        int maxLength = dp[word1.length()][word2.length()];
+        return word1.length() - maxLength + word2.length() - maxLength;
     }
 }
