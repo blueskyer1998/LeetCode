@@ -9,7 +9,6 @@ class Solution {
 
     
     private static int valid(String word1, String word2) {
-        int maxLength = 0;
 
         int[][] dp = new int[word1.length() + 1][word2.length() + 1];
 
@@ -26,7 +25,7 @@ class Solution {
                 }
             }
         }
-        maxLength = dp[word1.length()][word2.length()];
+        int maxLength = dp[word1.length()][word2.length()];
         return word1.length() - maxLength + word2.length() - maxLength;
     }
 }
