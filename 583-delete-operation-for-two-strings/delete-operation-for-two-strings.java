@@ -11,14 +11,6 @@ class Solution {
     private static int valid(String word1, String word2) {
         int maxLength = 0;
 
-        List<String> list = new ArrayList<>();
-
-        if(word1.length()>word2.length()){
-            String temp = word1;
-            word1 = word2;
-            word2 = temp;
-        }
-
         int[][] dp = new int[word1.length() + 1][word2.length() + 1];
 
         for (int i = 0; i <= word1.length(); i++) {
