@@ -25,7 +25,6 @@ class Solution {
                 }
             }
         }
-        int maxLength = dp[word1.length()][word2.length()];
-        return word1.length() - maxLength + word2.length() - maxLength;
+        return word1.length() - dp[word1.length()][word2.length()] + word2.length() - dp[word1.length()][word2.length()];
     }
 }
